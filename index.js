@@ -18,6 +18,8 @@ app.use(morgan('dev'));
 // Health
 app.get('/health', (req, res) => res.json({ health: 'ok' }));
 
+console.log(process.env.MONGO_URL); //you can access it straight way
+
 // connect to db
 connectDb(() => {
     // internal middleware
@@ -31,6 +33,6 @@ connectDb(() => {
     // Run server
     const serverPort = process.env.PORT || 3000;
     app.listen(serverPort, () => {
-        console.log('servier listening on port', serverPort);
+        console.log('server listening on port', serverPort);
     });
 });
