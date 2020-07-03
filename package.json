@@ -7,6 +7,9 @@
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "14.5.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/omritelem/hooksipedia-api.git"

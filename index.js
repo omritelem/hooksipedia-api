@@ -29,7 +29,7 @@ connectDb(() => {
     jobExecution();
 
     // Run server
-    const serverPort = process.env.PORT || 8080;
+    const serverPort = process.env.PORT || 3000;
     app.listen(serverPort, () => {
         console.log('servier listening on port', serverPort);
     });
