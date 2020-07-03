@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { getRepositoriesByPage, fetchAllRepositories, saveAllRepositories } = require('../../Services/Repositories');
+const { getRepositoriesByPage, fetchAllRepositories, saveAllRepositories } = require('../../services/Repositories');
 
 router.get('/', getRepositoriesByPage);
 

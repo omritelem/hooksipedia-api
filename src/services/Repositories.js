@@ -1,7 +1,7 @@
 const axios = require('axios');
-const { RepositoriesModel } = require('../Models/Repositories');
-const { DEFAULT_PAGE, DEFAULT_RESULTS_PER_PAGE } = require('../Constants/Repositories');
-const { GENERAL_ERROR } = require('../Constants/StatusCodes');
+const { RepositoriesModel } = require('../models/Repositories');
+const { DEFAULT_PAGE, DEFAULT_RESULTS_PER_PAGE } = require('../constants/Repositories');
+const { GENERAL_ERROR } = require('../constants/StatusCodes');
 
 const API_URL = 'https://api.github.com/search/repositories';
 const HEADERS = 'application/vnd.github.mercy-preview+json';
