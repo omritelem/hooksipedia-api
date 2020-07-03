@@ -6,9 +6,9 @@ const bodyParser = require('body-parser');
 const { connectDb } = require('./db');
 require('dotenv/config');
 
-const RepositoriesRoute = require('./src/Routes/Repositories/index');
-const LogsRoute = require('./src/Routes/Logs/index');
-const { jobExecution } = require('./src/Services/Cron');
+const RepositoriesRoute = require('./src/routes/repositories/index');
+const LogsRoute = require('./src/routes/logs/index');
+const { jobExecution } = require('./src/services/Cron');
 
 // Middleware's
 app.use(cors());
