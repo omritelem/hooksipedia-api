@@ -1,0 +1,36 @@
+{
+  "name": "hookipedia-api",
+  "version": "1.0.0",
+  "description": "Repository For fetching all github custom hooks repositories",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/omritelem/hooksipedia-api.git"
+  },
+  "keywords": [
+    "hooks",
+    "react"
+  ],
+  "author": "omri telem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omritelem/hooksipedia-api/issues"
+  },
+  "homepage": "https://github.com/omritelem/hooksipedia-api#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.21",
+    "mongoose-paginate": "^5.0.3",
+    "morgan": "^1.10.0",
+    "node-cron": "^2.0.3",
+    "nodemon": "^2.0.4"
+  }
+}
