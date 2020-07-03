@@ -18,7 +18,7 @@ app.use(morgan('dev'));
 // Health
 app.get('/health', (req, res) => res.json({ health: 'ok' }));
 
-console.log(process.env.MONGO_URL); //you can access it straight way
+console.log('the urls is:', process.env.MONGO_URL); //you can access it straight way
 
 // connect to db
 connectDb(() => {
