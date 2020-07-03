@@ -30,4 +30,8 @@ const repositoriesSchema =  mongoose.Schema({
 
 repositoriesSchema.plugin(mongoosePagination);
 
-module.exports = mongoose.model('Repositories', repositoriesSchema);
+const RepositoriesModel = mongoose.model('Repositories', repositoriesSchema);
+
+module.exports = {
+    RepositoriesModel,
+};

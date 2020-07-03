@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const LogsModel = require('../../models/Logs');
+const { LogsModel } = require('../../models/Logs');
 
 router.get('/', async (req, res) => {
     const result = await LogsModel.find({});

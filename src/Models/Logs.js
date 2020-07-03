@@ -11,5 +11,8 @@ const LogsSchema = mongoose.Schema({
     },
 });
 
-const Logs = mongoose.model('Logs', LogsSchema);
-module.exports = Logs;
+const LogsModel = mongoose.model('Logs', LogsSchema);
+
+module.exports = {
+    LogsModel,
+};
