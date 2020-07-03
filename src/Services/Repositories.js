@@ -1,5 +1,5 @@
 const axios = require('axios');
-const RepositoriesModel = require('../Models/Repositories');
+const { RepositoriesModel } = require('../Models/Repositories');
 const { DEFAULT_PAGE, DEFAULT_RESULTS_PER_PAGE } = require('../Constants/Repositories');
 const { GENERAL_ERROR } = require('../Constants/StatusCodes');
 
