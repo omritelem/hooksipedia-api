@@ -6,8 +6,8 @@ const connectDb = callback => {
         {
             useUnifiedTopology: true,
             useNewUrlParser: true,
-        },
-        () => {
+        });
+        mongoose.connection.once('open', () => {
 		    console.log('connected to db');
             callback();
         })
