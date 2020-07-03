@@ -26,7 +26,7 @@ connectDb(() => {
     app.use('/repositories', RepositoriesRoute);
     app.use('/logs', LogsRoute);
 
-    // jobExecution();
+    jobExecution();
 
     // Run server
     const serverPort = process.env.PORT || 8080;
