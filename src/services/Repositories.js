@@ -1,6 +1,7 @@
 const axios = require('axios');
 require('dotenv/config');
 const { RepositoriesModel } = require('../models/Repositories');
+const { LogsModel } = require('../models/Logs');
 const { DEFAULT_PAGE, DEFAULT_RESULTS_PER_PAGE } = require('../constants/Repositories');
 const { GENERAL_ERROR } = require('../constants/StatusCodes');
 
