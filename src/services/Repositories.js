@@ -1,5 +1,6 @@
 const axios = require('axios');
 require('dotenv/config');
+const mongoose = require('mongoose');
 const { RepositoriesModel } = require('../models/Repositories');
 const { LogsModel } = require('../models/Logs');
 const { DEFAULT_PAGE, DEFAULT_RESULTS_PER_PAGE } = require('../constants/Repositories');
@@ -8,7 +9,7 @@ const { GENERAL_ERROR } = require('../constants/StatusCodes');
 const API_URL = 'https://api.github.com/search/repositories';
 const HEADERS = 'application/vnd.github.mercy-preview+json';
 const COUNT_PER_PAGE = 100;
-const QUERY = 'use+topic:react-hooks';
+const QUERY = 'use+topic:react-hooks+stars:>=1';
 
 const getRepositoriesByPage = async (req, res, next) => {
     try {
@@ -34,7 +35,7 @@ const saveAllRepositories = async (req, res, next) => {
         .then(result => enrichRepositoriesData(result))
         .then(result => saveReposToDB(result))
         .then(result => res.json(result))
-        .catch((error) => writeToLog(res, error))
+        .catch((error) => writeToLog(error))
 };
 
 const fetchAllRepositories = async (req, res, next) => {
@@ -48,7 +49,7 @@ const runJob = () => {
     getAllRepositories(1, [])
         .then(result => enrichRepositoriesData(result))
         .then(result => saveReposToDB(result))
-        .then(result => writeToLog(`${result && result.length} rows updated`))
+        .then(result => writeToLog(`${result && result.length} repos has been saved to db.`))
         .catch((error) => writeToLog(error));
 };
 
